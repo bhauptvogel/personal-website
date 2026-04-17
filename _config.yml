@@ -1,0 +1,4 @@
+exclude:
+  - CLAUDE.md
+  - AGENT.md
+  - .gitignore
