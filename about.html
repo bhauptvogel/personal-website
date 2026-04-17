@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ben Hauptvogel</title>
+    <meta name="description" content="Ben Hauptvogel - AI Engineer and Computer Scientist specializing in Large Language Models, RLHF, and Full Stack Development. Based in Berlin.">
+    <meta name="keywords" content="Ben Hauptvogel, AI Engineer, Machine Learning, LLM, RLHF, Web Development, TU Berlin, BCG X, DFKI">
+    <meta name="author" content="Ben Hauptvogel">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://benhauptvogel.de/">
+    <meta property="og:title" content="Ben Hauptvogel">
+    <meta property="og:description" content="AI Engineer and Computer Scientist specializing in Large Language Models and Full Stack Development.">
+    <meta property="og:image" content="https://benhauptvogel.de/og-image.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Ben Hauptvogel">
+    <meta property="twitter:description" content="AI Engineer and Computer Scientist specializing in Large Language Models and Full Stack Development.">
+
+    <!-- AEO / Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Ben Hauptvogel",
+      "jobTitle": "AI Engineer",
+      "url": "https://benhauptvogel.de",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Berlin",
+        "addressCountry": "Germany"
+      },
+      "alumniOf": "Technical University Berlin",
+      "sameAs": [
+        "https://github.com/bhauptvogel",
+        "https://www.linkedin.com/in/ben-hauptvogel-952000210/"
+      ]
+    }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
+
+        :root {
+            --bg-color: #1a1a1a;
+            --surface-color: #242424;
+            --text-primary: #eeeeee;
+            --text-secondary: #b0b0b0;
+            --accent-color: #16a34a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 4rem 2rem;
+        }
+
+        main {
+            width: 100%;
+            max-width: 1000px;
+        }
+
+        .container {
+            background-color: var(--surface-color);
+            border-radius: 16px;
+            padding: 3rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 4rem;
+        }
+
+        .links-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .links-sidebar h3 {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+            opacity: 0.7;
+        }
+
+        .link-item, .location-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 0.75rem;
+            border-radius: 8px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid transparent;
+        }
+
+        .location-item {
+            cursor: default;
+        }
+
+        .link-item:hover {
+            background-color: rgba(22, 163, 74, 0.1);
+            color: var(--accent-color);
+            border-color: rgba(22, 163, 74, 0.2);
+            transform: translateX(8px);
+        }
+
+        .link-item svg, .location-item svg {
+            width: 20px;
+            height: 20px;
+            stroke-width: 2;
+            transition: transform 0.3s ease;
+        }
+
+        .link-item:hover svg {
+            transform: scale(1.2);
+            color: var(--accent-color);
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-top: 2.5rem;
+            margin-bottom: 1.25rem;
+            color: var(--accent-color);
+            border-bottom: 1px solid #333;
+            padding-bottom: 0.5rem;
+        }
+
+        .experience-item {
+            margin-bottom: 2rem;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-title {
+            font-weight: 600;
+            font-size: 1.2rem;
+            color: var(--text-primary);
+        }
+
+        .experience-date {
+            font-size: 0.9rem;
+            color: var(--accent-color);
+            font-weight: 500;
+        }
+
+        .experience-org {
+            font-style: italic;
+            color: var(--accent-color);
+            margin-bottom: 0.75rem;
+            font-weight: 500;
+        }
+
+        .experience-org a {
+            color: inherit;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .experience-org a:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+
+        p, li {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            margin-bottom: 1rem;
+        }
+
+        .main-content h2 {
+            border-bottom: 1px solid #333;
+            padding-bottom: 0.5rem;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="about-grid">
+                <aside class="links-sidebar">
+                    <h3>Links</h3>
+                    <div class="location-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                        Berlin, Germany
+                    </div>
+                    <a href="mailto:hauptvogel.ben@gmail.com" class="link-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+                        E-Mail
+                    </a>
+                    <a href="https://github.com/bhauptvogel" target="_blank" class="link-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                        GitHub
+                    </a>
+                    <a href="https://www.linkedin.com/in/ben-hauptvogel-952000210/" target="_blank" class="link-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                        LinkedIn
+                    </a>
+                    <!-- 
+                    <a href="https://www.youtube.com/@benmainbird" target="_blank" class="link-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 2-2 58.38 58.38 0 0 1 15 0 2 2 0 0 1 2 2 24.12 24.12 0 0 1 0 10 2 2 0 0 1-2 2 58.38 58.38 0 0 1-15 0 2 2 0 0 1-2-2Z"/><path d="m10 15 5-3-5-3z"/></svg>
+                        YouTube
+                    </a>
+                    -->
+                    <a href="CV.pdf" target="_blank" class="link-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+                        My CV
+                    </a>
+                    <a href="projects.html" class="link-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m16 18 2 2 4-4"/><path d="M12 15H8"/><path d="M12 11H8"/><path d="M8 7h4"/><path d="M16 12v-2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h8"/><path d="M16 7V5a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v2"/></svg>
+                        Personal Projects
+                    </a>
+                </aside>
+                
+                <section class="main-content">
+                    <h1>👋 Hello there, I'm Ben!</h1>
+                    <p>Making the computer go beep boop.</p>
+
+                    <h2>Professional Experience</h2>
+                    <div class="experience-item">
+                        <div class="experience-org"><a href="https://www.bcg.com/x/" target="_blank">Boston Consulting Group X</a></div>
+                        <p>I am currently doing an internship as <strong>Visiting Forward Deployed AI Engineer</strong> at BCG X in Berlin.</p>
+
+                        <div class="experience-org"><a href="https://www.tu.berlin/" target="_blank">Technical University Berlin</a></div>
+                        <p>As a <strong>Teaching Assistant (Tutor)</strong>, I guided students through the courses "Algorithms and Data Structures" and "Project Media".</p>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="experience-org"><a href="https://smart-medication.eu/" target="_blank">smart medication eHealth GmbH</a></div>
+                        <p>During my time as a <strong>Full Stack Web Developer</strong>, I worked on robust healthcare applications. Using Vue.js and Node.js, I worked on projects that demanded high security and data privacy standards.</p>
+                    </div>
+
+                    <h2>Publication</h2>
+                    <div class="experience-item">
+                        <div class="experience-org"><a href="https://www.dfki.de/web" target="_blank">German Research Center for Artificial Intelligence (DFKI)</a></div>
+                        <p>My AI research at DFKI centered on Large Language Models and Reinforcement Learning from Human Feedback (RLHF). I specialized in training LLMs on large-scale GPU clusters and explored how weak supervision could be used to scale reward models.</p>
+                        <p>
+                            <strong>Paper:</strong> “Language Modeling with Reinforcement Learning from Human Feedback with Weak Supervision” <br>
+                            <a href="https://ieeexplore.ieee.org/document/11166626" target="_blank" style="color: var(--accent-color); text-decoration: none; font-size: 0.9rem;">[IEEE Xplore]</a> 
+                            <a href="https://arxiv.org/html/2410.20869" target="_blank" style="color: var(--accent-color); text-decoration: none; font-size: 0.9rem; margin-left: 0.5rem;">[ArXiv]</a>
+                        </p>
+                    </div>
+
+                    <h2>Education</h2>
+                    <div class="experience-item">
+                        <div class="experience-org"><a href="https://www.tu.berlin/" target="_blank">Technical University Berlin</a></div>
+                        <p>I am currently pursuing my Master's in Computer Science, focusing on Cognitive Systems and Machine Learning. During this degree, in the winter semester of 2025/2026, I completed a study abroad semester (ERASMUS+) at the University of Ljubljana where I focused on Bioinformatics and Computational Genomics.</p>
+                        <p>Previously, I earned my Bachelor of Science in Computer Science and Digital Media (Medieninformatik) at TU Berlin. I received an award for exceptional academic performance as a top graduate in 2023/2024.</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <script>
+        // JavaScript logic goes here
+    </script>
+</body>
+</html>
