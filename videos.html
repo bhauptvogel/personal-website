@@ -247,6 +247,18 @@
             .container {
                 padding: 1.5rem;
             }
+            /* Hide the Watch column header and cells */
+            table thead th:last-child,
+            table tbody td:last-child {
+                display: none;
+            }
+            /* Make entire rows clickable and give visual feedback */
+            table tbody tr {
+                cursor: pointer;
+            }
+            table tbody tr:active {
+                background-color: rgba(255, 255, 255, 0.05);
+            }
         }
     </style>
 </head>
@@ -459,6 +471,14 @@
 
             filteredData.forEach(video => {
                 const tr = document.createElement('tr');
+
+                // Make entire row clickable on mobile (and desktop for convenience)
+                if (video.link) {
+                    tr.addEventListener('click', (e) => {
+                        if (e.target.closest('a')) return;
+                        window.open(video.link, '_blank');
+                    });
+                }
                 
                 // Name
                 const tdName = document.createElement('td');

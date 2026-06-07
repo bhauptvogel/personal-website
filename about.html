@@ -207,6 +207,36 @@
             padding-bottom: 0.5rem;
             margin-top: 3rem;
         }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 2rem 1rem;
+            }
+            .container {
+                padding: 1.5rem;
+            }
+            .about-grid {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+            }
+            .main-content {
+                order: 1;
+            }
+            .links-sidebar {
+                order: 2;
+            }
+            .links-sidebar h3 {
+                margin-top: 1rem;
+            }
+            h1 {
+                font-size: 2.2rem;
+            }
+            h2 {
+                font-size: 1.5rem;
+                margin-top: 2rem;
+            }
+        }
     </style>
 </head>
 <body>

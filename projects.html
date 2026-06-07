@@ -95,10 +95,6 @@
             transition: opacity 0.5s ease;
         }
 
-        .project-card:hover img {
-            opacity: 0.8;
-        }
-
         /* Layout Mapping */
         .card-werwolf {
             grid-row: 1 / 3;
@@ -118,22 +114,41 @@
             gap: 1.5rem;
         }
 
-        /* Hover Logic */
-        main:hover .project-card:not(:hover) {
-            filter: grayscale(1) brightness(0.4);
-            transform: scale(0.98);
-            opacity: 0.5;
-        }
+        /* Hover Logic (Desktop only) */
+        @media (hover: hover) and (pointer: fine) {
+            main:hover .project-card:not(:hover) {
+                filter: grayscale(1) brightness(0.4);
+                transform: scale(0.98);
+                opacity: 0.5;
+            }
 
-        .project-card:hover {
-            transform: scale(1.02);
-            z-index: 10;
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.4);
-        }
+            .project-card:hover {
+                transform: scale(1.02);
+                z-index: 10;
+                box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.4);
+            }
 
-        .project-card:hover span {
-            opacity: 1;
-            transform: scale(1.1);
+            .project-card:hover img {
+                opacity: 0.8;
+            }
+
+            .project-card:hover span {
+                opacity: 1;
+                transform: scale(1.1);
+            }
+
+            .btn:hover {
+                background-color: rgba(255, 255, 255, 0.1);
+                color: var(--accent-color);
+                border-color: var(--accent-color);
+                transform: scale(1.1);
+            }
+
+            .info-btn:hover .tooltip {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+            }
         }
 
         /* Top-right Buttons Styling */
@@ -162,13 +177,6 @@
             position: relative;
         }
 
-        .btn:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-            color: var(--accent-color);
-            border-color: var(--accent-color);
-            transform: scale(1.1);
-        }
-
         /* Info Tooltip */
         .info-btn .tooltip {
             position: absolute;
@@ -192,12 +200,6 @@
             z-index: 40;
         }
 
-        .info-btn:hover .tooltip {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
-
         /* Responsive */
         @media (max-width: 1000px) {
             body {
@@ -217,6 +219,9 @@
             }
             .card-werwolf {
                 aspect-ratio: 9/16;
+            }
+            .project-card img {
+                opacity: 0.8;
             }
         }
     </style>
