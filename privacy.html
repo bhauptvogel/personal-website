@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy – OpenClaw Connection</title>
-    <meta name="description" content="Privacy policy for the OpenClaw Connection Google OAuth application operated by Ben Hauptvogel.">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://benhauptvogel.de/privacy.html">
+    <title>Privacy Policy</title>
+    <meta name="description" content="Privacy policy for a personal Google Calendar integration.">
+    <meta name="robots" content="noindex, nofollow">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
 
@@ -112,42 +111,42 @@
 <body>
     <main class="container">
         <h1>Privacy Policy</h1>
-        <p class="subtitle">OpenClaw Connection — a personal Google Calendar integration · Last updated: 11 November 2026</p>
+        <p class="subtitle">Personal Google Calendar integration · Last updated: 11 November 2026</p>
 
         <div class="card">
-            <p><strong>In short:</strong> this application is a private, self-hosted tool used by exactly one person — its owner. It reads and writes calendar events for the owner's own Google account. It stores no analytics, shares nothing with third parties, and serves no other users.</p>
+            <p><strong>In short:</strong> this is a private integration used by one person — its owner. It reads and writes calendar events for the owner's own Google account. It stores no analytics, shares nothing with third parties, and serves no other users.</p>
         </div>
 
-        <h2>Who operates this application</h2>
-        <p>“OpenClaw Connection” is a Google OAuth client registered by Ben Hauptvogel, Berlin, Germany, for personal use with a self-hosted assistant running on his own server. It is not a public product, has no sign-up, and cannot be used by anyone else.</p>
+        <h2>Who operates this integration</h2>
+        <p>A private Google OAuth client registered by Ben Hauptvogel, Berlin, Germany, and used solely for his own Google account. It is not a public product, it has no sign-up, and no other person can use it or is affected by it.</p>
 
         <h2>What data is accessed</h2>
-        <p>The application requests a single Google permission: <strong>view and edit events on the owner's calendars</strong> (<code>https://www.googleapis.com/auth/calendar.events</code>).</p>
+        <p>The integration requests a single Google permission: <strong>view and edit events on the owner's own calendars</strong> (<code>https://www.googleapis.com/auth/calendar.events</code>).</p>
         <ul>
             <li>Calendar events: titles, descriptions, times, locations, attendee addresses, and reminders.</li>
             <li>No Gmail, Drive, Contacts, Photos, or health data is requested or accessible.</li>
-            <li>No data about other Google accounts is ever fetched.</li>
+            <li>No data belonging to any other Google account is ever fetched.</li>
         </ul>
 
         <h2>How the data is used</h2>
-        <p>Only to answer the owner's own requests to his assistant — for example listing upcoming events, creating an appointment, or moving an event when he asks. There is no automated profiling, advertising, or marketing use.</p>
+        <p>Only to serve the owner's own requests — listing upcoming events, creating an appointment, moving or deleting an event. There is no profiling, advertising, or marketing use.</p>
 
         <h2>Where it is stored</h2>
-        <p>Calendar content is fetched from Google on demand and is not warehoused in a database. Two things persist on the owner's private server:</p>
+        <p>Calendar content is fetched from Google on demand and is not warehoused in a database. Two things persist on a privately operated server that only the owner controls:</p>
         <ul>
             <li>An OAuth refresh token, stored in a file readable only by the server process, used to obtain short-lived access tokens.</li>
             <li>The OAuth client credentials issued by Google Cloud, likewise restricted to that server.</li>
         </ul>
-        <p>Conversation context used by the assistant is kept on the same private infrastructure and is not transmitted to any analytics or advertising service.</p>
+        <p>No analytics or advertising service receives any of this data.</p>
 
         <h2>Sharing</h2>
-        <p>No sharing. Data is not sold, rented, published, or disclosed to third parties. The only outbound calls are to Google APIs (<code>googleapis.com</code>, <code>oauth2.googleapis.com</code>) to read or modify the owner's own calendar.</p>
+        <p>No sharing. Data is not sold, rented, published, or disclosed to third parties. The only outbound calls go to Google APIs (<code>googleapis.com</code>, <code>oauth2.googleapis.com</code>) to read or modify the owner's own calendar.</p>
 
         <h2>Retention and deletion</h2>
-        <p>Data remains accessible only while the OAuth grant exists. Access can be revoked at any time at <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">myaccount.google.com/permissions</a>, which immediately invalidates the stored token. The token file and any local assistant context can be deleted on request; deletion removes the integration entirely.</p>
+        <p>Data remains accessible only while the OAuth grant exists. Access can be revoked at any time at <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">myaccount.google.com/permissions</a>, which immediately invalidates the stored token. Deleting the token file removes the integration entirely.</p>
 
         <h2>Security</h2>
-        <p>Credentials are stored with file permissions limited to the server user, the OAuth callback is handled locally, and the server is not publicly exposed for this integration. No client secrets or tokens appear on this website.</p>
+        <p>Credentials are stored with permissions limited to the server user, the OAuth callback is handled locally, and no client secret or token is published on this website.</p>
 
         <h2>Your rights</h2>
         <p>As the sole data subject, the owner can request information about, correction of, or deletion of any stored data at any time using the contact below. Under the GDPR this includes the rights of access (Art. 15), rectification (Art. 16), erasure (Art. 17), and data portability (Art. 20).</p>
@@ -156,11 +155,7 @@
         <p>Ben Hauptvogel · Berlin, Germany · <a href="mailto:hauptvogel.ben@gmail.com">hauptvogel.ben@gmail.com</a></p>
 
         <h2>Changes</h2>
-        <p>If the scope of this integration ever changes, this page will be updated and the date at the top revised.</p>
-
-        <footer>
-            <a href="about.html">← Back to benhauptvogel.de</a>
-        </footer>
+        <p>If the scope of this integration changes, this page will be updated and the date at the top revised.</p>
     </main>
 </body>
 </html>
