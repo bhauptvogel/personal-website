@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy – OpenClaw Connection</title>
+    <meta name="description" content="Privacy policy for the OpenClaw Connection Google OAuth application operated by Ben Hauptvogel.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://benhauptvogel.de/privacy.html">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
+
+        :root {
+            --bg-color: #1a1a1a;
+            --surface-color: #242424;
+            --text-primary: #eeeeee;
+            --text-secondary: #b0b0b0;
+            --accent-color: #16a34a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.7;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 4rem 2rem;
+        }
+
+        .container {
+            max-width: 720px;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 2.5rem;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-top: 2.2rem;
+            margin-bottom: 0.6rem;
+        }
+
+        p, li {
+            color: var(--text-secondary);
+            margin-bottom: 0.8rem;
+        }
+
+        strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        ul {
+            padding-left: 1.3rem;
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .card {
+            background-color: var(--surface-color);
+            border-radius: 12px;
+            padding: 1.2rem 1.4rem;
+            margin: 1.5rem 0;
+        }
+
+        .card p:last-child {
+            margin-bottom: 0;
+        }
+
+        footer {
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #333;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 2.5rem 1.25rem; }
+            h1 { font-size: 1.8rem; }
+            h2 { font-size: 1.15rem; }
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <h1>Privacy Policy</h1>
+        <p class="subtitle">OpenClaw Connection — a personal Google Calendar integration · Last updated: 11 November 2026</p>
+
+        <div class="card">
+            <p><strong>In short:</strong> this application is a private, self-hosted tool used by exactly one person — its owner. It reads and writes calendar events for the owner's own Google account. It stores no analytics, shares nothing with third parties, and serves no other users.</p>
+        </div>
+
+        <h2>Who operates this application</h2>
+        <p>“OpenClaw Connection” is a Google OAuth client registered by Ben Hauptvogel, Berlin, Germany, for personal use with a self-hosted assistant running on his own server. It is not a public product, has no sign-up, and cannot be used by anyone else.</p>
+
+        <h2>What data is accessed</h2>
+        <p>The application requests a single Google permission: <strong>view and edit events on the owner's calendars</strong> (<code>https://www.googleapis.com/auth/calendar.events</code>).</p>
+        <ul>
+            <li>Calendar events: titles, descriptions, times, locations, attendee addresses, and reminders.</li>
+            <li>No Gmail, Drive, Contacts, Photos, or health data is requested or accessible.</li>
+            <li>No data about other Google accounts is ever fetched.</li>
+        </ul>
+
+        <h2>How the data is used</h2>
+        <p>Only to answer the owner's own requests to his assistant — for example listing upcoming events, creating an appointment, or moving an event when he asks. There is no automated profiling, advertising, or marketing use.</p>
+
+        <h2>Where it is stored</h2>
+        <p>Calendar content is fetched from Google on demand and is not warehoused in a database. Two things persist on the owner's private server:</p>
+        <ul>
+            <li>An OAuth refresh token, stored in a file readable only by the server process, used to obtain short-lived access tokens.</li>
+            <li>The OAuth client credentials issued by Google Cloud, likewise restricted to that server.</li>
+        </ul>
+        <p>Conversation context used by the assistant is kept on the same private infrastructure and is not transmitted to any analytics or advertising service.</p>
+
+        <h2>Sharing</h2>
+        <p>No sharing. Data is not sold, rented, published, or disclosed to third parties. The only outbound calls are to Google APIs (<code>googleapis.com</code>, <code>oauth2.googleapis.com</code>) to read or modify the owner's own calendar.</p>
+
+        <h2>Retention and deletion</h2>
+        <p>Data remains accessible only while the OAuth grant exists. Access can be revoked at any time at <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">myaccount.google.com/permissions</a>, which immediately invalidates the stored token. The token file and any local assistant context can be deleted on request; deletion removes the integration entirely.</p>
+
+        <h2>Security</h2>
+        <p>Credentials are stored with file permissions limited to the server user, the OAuth callback is handled locally, and the server is not publicly exposed for this integration. No client secrets or tokens appear on this website.</p>
+
+        <h2>Your rights</h2>
+        <p>As the sole data subject, the owner can request information about, correction of, or deletion of any stored data at any time using the contact below. Under the GDPR this includes the rights of access (Art. 15), rectification (Art. 16), erasure (Art. 17), and data portability (Art. 20).</p>
+
+        <h2>Contact</h2>
+        <p>Ben Hauptvogel · Berlin, Germany · <a href="mailto:hauptvogel.ben@gmail.com">hauptvogel.ben@gmail.com</a></p>
+
+        <h2>Changes</h2>
+        <p>If the scope of this integration ever changes, this page will be updated and the date at the top revised.</p>
+
+        <footer>
+            <a href="about.html">← Back to benhauptvogel.de</a>
+        </footer>
+    </main>
+</body>
+</html>
