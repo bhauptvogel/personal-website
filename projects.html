@@ -114,6 +114,22 @@
             gap: 1.5rem;
         }
 
+        /* Wave60: fill the whole tile, cropping the game's built-in letterboxing */
+        .card-wave60 {
+            container-type: size;
+        }
+
+        .card-wave60 iframe {
+            top: 50%;
+            left: auto;
+            right: 0;
+            width: max(100cqw, 177.78cqh);
+            height: max(100cqh, 56.25cqw);
+            transform: translateY(-50%);
+            filter: saturate(0.5) brightness(0.8);
+            transition: filter 0.5s ease;
+        }
+
         /* Hover Logic (Desktop only) */
         @media (hover: hover) and (pointer: fine) {
             main:hover .project-card:not(:hover) {
@@ -130,6 +146,10 @@
 
             .project-card:hover img {
                 opacity: 0.8;
+            }
+
+            .project-card:hover iframe {
+                filter: none;
             }
 
             .project-card:hover span {
@@ -281,7 +301,7 @@
             </div>
 
             <!-- Wave60 -->
-            <div class="project-card card-last" onclick="navigateTo('https://wave60.onrender.com/')">
+            <div class="project-card card-wave60" onclick="navigateTo('https://wave60.onrender.com/')">
                 <iframe src="https://wave60.onrender.com/"></iframe>
                 <span>Wave60</span>
                 <div class="controls">
